@@ -1,0 +1,21 @@
+# # # Secrets et Fichiers de Configuration Locaux # # #
+# Ne jamais versionner les secrets ! 
+.env
+*.env
+.env.local
+
+# # # Dépendances # # #
+# Ne jamais versionner les dépendances lourdes 
+/node_modules
+/.venv
+/npm-debug.log
+
+# # # Dossiers de Build et Cache # # #
+/dist
+/build
+/__pycache__/
+.cache
+
+# # # Fichiers Système # # #
+.DS_Store
+Thumbs.db
