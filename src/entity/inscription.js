@@ -41,9 +41,11 @@ function inscription(email, password) {
 function connexion(email, password) {
   console.log(`[AuthService] Tentative de connexion pour ${email}`);
 
-  // BUG INTRODUIT : un seul '=' (assignation) au lieu de '===' (comparaison)
-  if (email === "test@devtrack.com" && password = "password123") { 
-    console.log("[AuthService] Connexion réussie.");
+  // ...
+// CORRECTION DU BUG : '===' (comparaison) au lieu de '=' (assignation)
+if (email === "test@devtrack.com" && password === "password123") { 
+  console.log("[AuthService] Connexion réussie.");
+// ...
     return { token: "fake-jwt-token-for-dev" };
   }
 // ...
