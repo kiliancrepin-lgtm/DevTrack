@@ -37,15 +37,16 @@ function inscription(email, password) {
  * Simule la connexion d'un utilisateur.
  * (Dans la vraie vie, on chercherait en BDD et on comparerait les hash).
  */
+// ...
 function connexion(email, password) {
   console.log(`[AuthService] Tentative de connexion pour ${email}`);
 
-  // Simule un utilisateur existant
-  if (email === "test@devtrack.com" && password === "password123") {
+  // BUG INTRODUIT : un seul '=' (assignation) au lieu de '===' (comparaison)
+  if (email === "test@devtrack.com" && password = "password123") { 
     console.log("[AuthService] Connexion réussie.");
-    // Simule un token de session ou JWT
     return { token: "fake-jwt-token-for-dev" };
   }
+// ...
   
   console.warn("[AuthService] Échec de la connexion: identifiants incorrects.");
   return null;
