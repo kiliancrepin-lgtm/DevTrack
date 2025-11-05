@@ -20,6 +20,7 @@ class User {
 function inscription(email, password) {
   console.log(`[AuthService] Tentative d'inscription pour ${email}`);
   
+  
   if (!email || !password || password.length < 8) {
     console.error("[AuthService] Données invalides pour l'inscription.");
     return null;
@@ -39,6 +40,10 @@ function inscription(email, password) {
  */
 // ...
 function connexion(email, password) {
+   if (!email) {
+    console.warn("[AUTH-VALIDATION] Email manquant.");
+    return null;
+  }
   console.log(`[AuthService] Tentative de connexion pour ${email}`);
 
   // ...
