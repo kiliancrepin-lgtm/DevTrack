@@ -41,25 +41,20 @@ function inscription(email, password) {
 function connexion(email, password) {
 
 
-  if (!email || !password || password.length < 8) {
-    console.error("[AuthService] Données invalides pour l'inscription.");
+
+
+  
+   if (!email) {
+    console.warn("[AUTH-VALIDATION] Email manquant.");
     return null;
   }
 
   console.log(`[AuthService] Tentative de connexion pour ${email}`);
-  console.log(`[AUTH-LOG] Nouvelle tentative de awanecion pour ${email}`);
   // ...
 // CORRECTION DU BUG : '===' (comparaison) au lieu de '=' (assignation)
 if (email === "test@devtrack.com" && password === "password123") { 
-  console.log("[AuthService] Connexion réussie.");
-  console.log("[AuthService] Connexion réussie.");
-  console.log("[AuthService] Connexion réussie.");
-  console.log("[AuthService] Connexion réussie.");
-
-// ...
     return { token: "fake-jwt-token-for-dev" };
   }
-// ...
   
   console.warn("[AuthService] Échec de la connexion: identifiants incorrects.");
   return null;
