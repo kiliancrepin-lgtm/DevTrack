@@ -20,7 +20,6 @@ class User {
 function inscription(email, password) {
   console.log(`[AuthService] Tentative d'inscription pour ${email}`);
   
-  
   if (!email || !password || password.length < 8) {
     console.error("[AuthService] Données invalides pour l'inscription.");
     return null;
@@ -40,16 +39,23 @@ function inscription(email, password) {
  */
 // ...
 function connexion(email, password) {
-   if (!email) {
-    console.warn("[AUTH-VALIDATION] Email manquant.");
+
+
+  if (!email || !password || password.length < 8) {
+    console.error("[AuthService] Données invalides pour l'inscription.");
     return null;
   }
+
   console.log(`[AuthService] Tentative de connexion pour ${email}`);
   console.log(`[AUTH-LOG] Nouvelle tentative de connexion pour ${email}`);
   // ...
 // CORRECTION DU BUG : '===' (comparaison) au lieu de '=' (assignation)
 if (email === "test@devtrack.com" && password === "password123") { 
   console.log("[AuthService] Connexion réussie.");
+  console.log("[AuthService] Connexion réussie.");
+  console.log("[AuthService] Connexion réussie.");
+  console.log("[AuthService] Connexion réussie.");
+
 // ...
     return { token: "fake-jwt-token-for-dev" };
   }
