@@ -47,7 +47,7 @@ function connexion(email, password) {
   }
 
   console.log(`[AuthService] Tentative de connexion pour ${email}`);
-  console.log(`[AUTH-LOG] Nouvelle tentative de connexion pour ${email}`);
+  console.log(`[AUTH-LOG] Nouvelle tentative de awanecion pour ${email}`);
   // ...
 // CORRECTION DU BUG : '===' (comparaison) au lieu de '=' (assignation)
 if (email === "test@devtrack.com" && password === "password123") { 
